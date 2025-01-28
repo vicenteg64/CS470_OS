@@ -1,20 +1,19 @@
-#echo "Hello World"
-
 #Step 1: Create directory with the current date and time
 currentDate=$(date +"%Y-%m-%d-%H-%M-%S")
 
-#create directory 
+#Create main directory 
 mkdir "$currentDate"
 
-#array with programming langauges
+#Array with programming langauges
 proLang=("Java" "Python" "C#" "Fortan" "Ruby" "C++" "Javascript" "Rust" "Assembly" "C")
 
 #Step 2: Create 10 subdirectories named file101-file110
-echo -e "Create file directories and include the textfiles with text files with their own programming language."
+echo -e "Create file directories and include the textfiles with text files with their own programming language..."
 for i in {101..110}; do
 
     mkdir "$currentDate"/"file$i"
 
+    #Variable to give the text files the correct number
     fileNum=$((i + 400))
 
     touch "tuser$fileNum.txt"
@@ -22,7 +21,7 @@ for i in {101..110}; do
     #Variable access the elements in the array
     arrIndex=$((i - 101))
 
-    #access the things in the array to write to file
+    #Access the text file created and add the elements in the proLang array
     echo ${proLang[$arrIndex]} > "tuser$fileNum.txt"
 
     #Move the file to folder
@@ -30,6 +29,8 @@ for i in {101..110}; do
 
     echo "tuser$fileNum.txt created within file$i"
 done
+echo "Subdirectories and text files created."
 
 #Step 3: Add executing permission
+echo "Giving executing premission..."
 chmod +x create_files_with_subdirs.sh
