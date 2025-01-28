@@ -1,5 +1,5 @@
 #Step 1: Create directory with the current date and time
-currentDate=$(date +"%Y-%m-%d-%H-%M-%S")
+currentDate=$(date +"%Y-%m-%d-%H:%M:%S")
 
 #Create main directory 
 mkdir "$currentDate"
