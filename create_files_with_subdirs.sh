@@ -26,8 +26,6 @@ for i in {101..110}; do
 
     #Move the file to folder
     mv "tuser$fileNum.txt" "$currentDate"/"file$i"
-
-    echo "tuser$fileNum.txt created within file$i"
 done
 echo "Subdirectories and text files created."
 
