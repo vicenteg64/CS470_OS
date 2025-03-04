@@ -16,7 +16,6 @@ typedef struct {
 void calculateWaitingTimeAndExecutionOrder(Process proc[], int n, int quantum) {
     // Array to store remaining burst times
     int remaining_brust_times[n];
-    // Assuming a maximum of 1000 executions for simplicity
     //Intialize the remaining times for the proccesses
     for(int i = 0; i < n; i++){
         remaining_brust_times[i] = proc[i].burst_time;
